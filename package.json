@@ -1,0 +1,20 @@
+{
+  "name": "intellijobs",
+  "version": "1.0.0",
+  "description": "IntelliJobs - Intelligent Job Portal powered by String Matching (KMP, Rabin-Karp, Z-Algorithm, Edit Distance) and Graph Algorithms (BFS, DFS, Dijkstra, Bipartite Matching)",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js"
+  },
+  "keywords": [
+    "job-portal",
+    "algorithms",
+    "kmp",
+    "rabin-karp",
+    "z-algorithm",
+    "dijkstra",
+    "graph-algorithms"
+  ],
+  "author": "sesank09",
+  "license": "MIT"
+}

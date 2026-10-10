@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#5B21B6">
+    <meta name="description" content="Intelligent Job Portal powered by Java String Matching (KMP, Rabin-Karp, Z-Algorithm, Edit Distance) and Graph Algorithms (BFS, DFS, Dijkstra, Bipartite Matching) for DSA-3 Project.">
+
+    <title>Intelligent Job Portal — DSA-3 Project</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="announcement">
+        <span class="announcement-dot"></span>
+        <span>DSA-3 Academic Project — Powered by Java String Matching & Graph Theory Algorithms</span>
+        <a href="#algorithm-lab" class="announcement-link">Explore Algorithm Lab ↗</a>
+    </div>
+
+    <!-- SITE HEADER & NAVIGATION -->
+    <header class="site-header" id="site-header">
+        <div class="header-inner section-shell">
+            <a class="brand" href="#home" id="brand-link">
+                <span class="brand-mark">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 23V9l9 9 9-9v14"/>
+                        <path d="M7 9h5M20 23h5"/>
+                    </svg>
+                </span>
+                <span class="brand-text">
+                    intelli<span class="brand-accent">jobs</span>
+                    <small>DSA-3 INTELLIGENT PLATFORM</small>
+                </span>
+            </a>
+
+            <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+                <a class="nav-link active" href="#home" id="nav-home">Home</a>
+                <a class="nav-link" href="#jobs" id="nav-jobs">Find Jobs</a>
+                <a class="nav-link" href="#skill-matcher" id="nav-skill-matcher">Skill Matcher</a>
+                <a class="nav-link" href="#algorithm-lab" id="nav-algorithm-lab">Algorithm Lab</a>
+                <a class="nav-link" href="#about-project" id="nav-about-project">About Project</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="saved-jobs-btn" id="saved-jobs-toggle" aria-label="View saved jobs">
+                    <span class="saved-icon">★</span>
+                    <span class="saved-text">Saved</span>
+                    <span class="saved-badge" id="saved-count">0</span>
+                </button>
+
+                <a class="header-cta" href="#skill-matcher">
+                    Match Skills <span>↗</span>
+                </a>
+
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ========================================================================= -->
+        <!-- 1. HOME SECTION                                                           -->
+        <!-- ========================================================================= -->
+        <section class="home-section" id="home">
+            <div class="section-shell">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="eyebrow-pill">
+                            <span class="eyebrow-spark">✦</span>
+                            <span>Intelligent DSA Recruitment Engine</span>
+                        </div>
+
+                        <h1 class="hero-title">
+                            Find the Right Job<br>
+                            <span class="gradient-text">for Your Skills</span>
+                        </h1>
+
+                        <p class="hero-subtitle">
+                            Powered by authentic Java Data Structures & Algorithms. Discover opportunities with precision using
+                            <strong>Knuth-Morris-Pratt</strong>, <strong>Rabin-Karp</strong>, <strong>Z-Algorithm</strong>,
+                            and calculate candidate fit with <strong>Jaccard Similarity</strong>.
+                        </p>
+
+                        <!-- HERO SEARCH BAR -->
+                        <div class="hero-search-box">
+                            <div class="hero-search-field">
+                                <span class="search-icon">🔍</span>
+                                <input type="text" id="hero-keyword-input" placeholder="Role, skill, or keyword (e.g. Java, Python)..." autocomplete="off">
+                            </div>
+                            <div class="hero-search-divider"></div>
+                            <div class="hero-search-field">
+                                <span class="search-icon">📍</span>
+                                <input type="text" id="hero-location-input" placeholder="Location (e.g. Hyderabad, Remote)..." autocomplete="off">
+                            </div>
+                            <button class="button button-primary hero-search-submit" id="hero-search-btn">
+                                Explore Jobs <span>↗</span>
+                            </button>
+                        </div>
+
+                        <!-- LIVE METRICS BAR -->
+                        <div class="hero-stats-row">
+                            <div class="stat-item">
+                                <strong class="stat-number" id="stat-total-jobs">60</strong>
+                                <span class="stat-label">Verified Jobs</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <strong class="stat-number">4</strong>
+                                <span class="stat-label">String Matchers (KMP, RK, Z, ED)</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <strong class="stat-number">4</strong>
+                                <span class="stat-label">Graph Algorithms (BFS, DFS, Dijkstra, BM)</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <strong class="stat-number">100%</strong>
+                                <span class="stat-label">Java DSA Backend</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- HERO ART & FEATURE PREVIEW -->
+                    <div class="hero-visual">
+                        <div class="algo-preview-card">
+                            <div class="preview-card-header">
+                                <div class="pulse-indicator">
+                                    <span class="pulse-dot"></span>
+                                    <span>LIVE DSA ENGINE</span>
+                                </div>
+                                <span class="card-badge">REST API CONNECTED</span>
+                            </div>
+
+                            <div class="preview-hero-body">
+                                <h3>Real-Time Skill Matching</h3>
+                                <p>Candidate skills are tokenized and scored against job requirements using set theory in Java:</p>
+                                <div class="formula-box">
+                                    <code>J(A, B) = |A ∩ B| / |A ∪ B| × 100%</code>
+                                </div>
+
+                                <div class="preview-mini-match">
+                                    <div class="mini-match-head">
+                                        <div>
+                                            <strong>Java Developer</strong>
+                                            <small>Northstar Labs · Hyderabad</small>
+                                        </div>
+                                        <span class="match-badge-pill green">100% Match</span>
+                                    </div>
+                                    <div class="skill-chips-row">
+                                        <span class="chip matched">✓ Java</span>
+                                        <span class="chip matched">✓ SQL</span>
+                                        <span class="chip matched">✓ Spring Boot</span>
+                                    </div>
+                                </div>
+
+                                <div class="preview-actions">
+                                    <a href="#jobs" class="button button-outline-purple full-width">Browse All 60 Jobs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POPULAR CATEGORIES ROW -->
+                <div class="popular-categories-card">
+                    <div class="categories-header">
+                        <h4>Explore by Popular Category</h4>
+                        <span class="subtext">Click any domain to filter active job listings</span>
+                    </div>
+                    <div class="category-chips-list" id="home-category-chips">
+                        <button class="cat-chip active" data-category="All">✳ All Categories</button>
+                        <button class="cat-chip" data-category="Software">⌘ Software Engineering</button>
+                        <button class="cat-chip" data-category="Data & AI">◈ Data Science & AI</button>
+                        <button class="cat-chip" data-category="Web Development">▧ Web Development</button>
+                        <button class="cat-chip" data-category="Cloud & DevOps">☁ Cloud & DevOps</button>
+                        <button class="cat-chip" data-category="Cybersecurity">⛨ Cybersecurity</button>
+                    </div>
+                </div>
+
+                <!-- FEATURED JOBS PREVIEW -->
+                <div class="featured-jobs-section">
+                    <div class="section-title-row">
+                        <div>
+                            <span class="kicker">CURATED ROLES</span>
+                            <h2>Featured Opportunities</h2>
+                        </div>
+                        <a href="#jobs" class="view-all-link">View all 60 listings <span>→</span></a>
+                    </div>
+                    <div class="featured-grid" id="featured-jobs-grid">
+                        <!-- Loaded dynamically from API -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 2. FIND JOBS (JOB LISTINGS PAGE)                                          -->
+        <!-- ========================================================================= -->
+        <section class="jobs-section" id="jobs">
+            <div class="section-shell">
+                <div class="section-header-block">
+                    <div class="eyebrow-pill">
+                        <span>THE OPPORTUNITY BOARD</span>
+                    </div>
+                    <h2>Explore Active Opportunities</h2>
+                    <p>Search, filter, and match real career roles powered by your chosen string-matching algorithm.</p>
+                </div>
+
+                <!-- SEARCH AND ALGORITHM CONTROL BAR -->
+                <div class="main-filter-panel">
+                    <div class="search-inputs-grid">
+                        <div class="input-group search-input-group">
+                            <label for="job-keyword-input">Search Keywords or Skills</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">🔍</span>
+                                <input type="search" id="job-keyword-input" placeholder="Title, required skill, company, or tool..." autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="input-group location-input-group">
+                            <label for="job-location-select">Location Filter</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">📍</span>
+                                <select id="job-location-select">
+                                    <option value="All">All Locations</option>
+                                    <option value="Hyderabad">Hyderabad</option>
+                                    <option value="Bengaluru">Bengaluru</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Pune">Pune</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Remote">Remote</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-group algorithm-input-group">
+                            <label for="job-algorithm-select">String Matching Algorithm</label>
+                            <div class="input-wrapper algorithm-wrapper">
+                                <span class="input-icon">⚡</span>
+                                <select id="job-algorithm-select">
+                                    <option value="kmp">Knuth-Morris-Pratt (KMP)</option>
+                                    <option value="rabinkarp">Rabin-Karp (Rolling Hash)</option>
+                                    <option value="zalgorithm">Z-Algorithm (Z-Array)</option>
+                                    <option value="editdistance">Edit Distance (Fuzzy Levenshtein)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-group sort-input-group">
+                            <label for="job-sort-select">Sort By</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">↕</span>
+                                <select id="job-sort-select">
+                                    <option value="recommended">Recommended</option>
+                                    <option value="salary">Salary: High to Low</option>
+                                    <option value="title">Job Title (A–Z)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CATEGORY TABS ROW -->
+                    <div class="category-tabs-container">
+                        <div class="category-tabs" id="category-tabs-list">
+                            <button class="tab-btn active" data-category="All">All Roles</button>
+                            <button class="tab-btn" data-category="Software">Software</button>
+                            <button class="tab-btn" data-category="Data & AI">Data & AI</button>
+                            <button class="tab-btn" data-category="Web Development">Web Development</button>
+                            <button class="tab-btn" data-category="Cloud & DevOps">Cloud & DevOps</button>
+                            <button class="tab-btn" data-category="Cybersecurity">Cybersecurity</button>
+                        </div>
+
+                        <button class="reset-filters-btn" id="reset-filters-btn" title="Reset all search filters">
+                            <span>↺</span> Reset Filters
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ALGORITHM EXECUTION STATUS BANNER -->
+                <div class="algo-status-strip" id="algo-status-strip">
+                    <div class="algo-status-info">
+                        <span class="status-pulse-dot"></span>
+                        <span id="algo-status-text">Ready to search. Backend loaded 60 job records.</span>
+                    </div>
+                    <div class="algo-meta-badge" id="algo-meta-badge">
+                        Backend Algorithm: <strong id="active-algo-name">KMP</strong>
+                    </div>
+                </div>
+
+                <!-- LOADING INDICATOR -->
+                <div class="loading-state" id="jobs-loading-spinner" hidden>
+                    <div class="spinner"></div>
+                    <p>Executing search on Java backend...</p>
+                </div>
+
+                <!-- JOB CARDS GRID -->
+                <div class="job-grid" id="job-cards-container" aria-live="polite">
+                    <!-- Populated by JavaScript fetch() -->
+                </div>
+
+                <!-- EMPTY STATE -->
+                <div class="empty-results-box" id="jobs-empty-state" hidden>
+                    <div class="empty-icon">🔎</div>
+                    <h3>No matching job opportunities found</h3>
+                    <p>We couldn't find any roles matching your current search criteria. Try a different keyword, adjust the location, or select Edit Distance (Fuzzy) to tolerate typos.</p>
+                    <button class="button button-primary" id="empty-state-reset-btn">Show All Available Jobs</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 3. SKILL MATCHER SECTION                                                  -->
+        <!-- ========================================================================= -->
+        <section class="matcher-section" id="skill-matcher">
+            <div class="section-shell">
+                <div class="matcher-layout">
+                    <div class="matcher-form-card">
+                        <div class="card-tag">
+                            <span>✦ CANDIDATE PROFILE</span>
+                        </div>
+                        <h2>Intelligent Skill Matcher</h2>
+                        <p>
+                            Enter your technical competencies. Our Java backend computes the mathematical
+                            <strong>Jaccard Similarity Index</strong> against every role in the dataset to calculate your compatibility percentage.
+                        </p>
+
+                        <div class="formula-card">
+                            <div class="formula-title">Jaccard Similarity Coefficient:</div>
+                            <div class="formula-math">
+                                <code>J(Candidate, Job) = |Candidate ∩ Job| / |Candidate ∪ Job|</code>
+                            </div>
+                            <div class="formula-note">Calculates set intersection (common skills) divided by set union (all unique skills).</div>
+                        </div>
+
+                        <div class="skill-input-container">
+                            <label for="candidate-skills-input">
+                                <strong>Your Technical Skills</strong>
+                                <small>(Separate skills with commas, semicolons, or pipes)</small>
+                            </label>
+                            <textarea id="candidate-skills-input" rows="3" placeholder="e.g. Java, SQL, Spring Boot, REST API, Git"></textarea>
+                        </div>
+
+                        <!-- ONE CLICK PRESET BUTTONS -->
+                        <div class="preset-skills-block">
+                            <span class="preset-label">Quick Presets:</span>
+                            <div class="preset-buttons">
+                                <button type="button" class="preset-btn" data-preset="Java, SQL, Spring Boot, REST API">☕ Java Stack</button>
+                                <button type="button" class="preset-btn" data-preset="Python, SQL, Machine Learning, Statistics">📊 Data & AI</button>
+                                <button type="button" class="preset-btn" data-preset="HTML, CSS, JavaScript, React">🌐 Web Frontend</button>
+                                <button type="button" class="preset-btn" data-preset="AWS, Linux, Docker, Git, CI/CD">☁ Cloud & DevOps</button>
+                                <button type="button" class="preset-btn" data-preset="Cybersecurity, Networking, Linux, Security">🛡 Cybersecurity</button>
+                            </div>
+                        </div>
+
+                        <button class="button button-purple match-submit-btn" id="execute-skill-match-btn">
+                            Calculate Skill Matches <span>↗</span>
+                        </button>
+                    </div>
+
+                    <div class="matcher-results-card">
+                        <div class="results-header-row">
+                            <h3>Matching Results</h3>
+                            <span class="results-count-pill" id="match-results-count">Ready</span>
+                        </div>
+
+                        <div id="match-results-container" class="match-results-list">
+                            <div class="matcher-placeholder">
+                                <span class="placeholder-icon">🎯</span>
+                                <h4>No Skills Evaluated Yet</h4>
+                                <p>Enter your skills or select one of the presets on the left to see ranked recommendations from the Java backend.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 4. ALGORITHM LAB                                                          -->
+        <!-- ========================================================================= -->
+        <section class="lab-section" id="algorithm-lab">
+            <div class="section-shell">
+                <div class="section-header-block">
+                    <div class="eyebrow-pill">
+                        <span>INTERACTIVE DSA WORKBENCH</span>
+                    </div>
+                    <h2>Algorithm Laboratory</h2>
+                    <p>
+                        Inspect, test, and benchmark the algorithms implemented in Java.
+                        All execution timings are measured in the JVM using <code>System.nanoTime()</code> without fabrication.
+                    </p>
+                </div>
+
+                <!-- LAB TABS SWITCHER -->
+                <div class="lab-nav-tabs">
+                    <button class="lab-tab-btn active" id="lab-tab-string" data-tab="tab-string-matching">
+                        <span>🔤</span> String Matching & Benchmarks
+                    </button>
+                    <button class="lab-tab-btn" id="lab-tab-graph" data-tab="tab-graph-algorithms">
+                        <span>🕸</span> Graph Algorithms Playground
+                    </button>
+                </div>
+
+                <!-- TAB 1: STRING MATCHING & BENCHMARK -->
+                <div class="lab-tab-content active" id="tab-string-matching">
+                    <div class="lab-control-card">
+                        <div class="lab-input-grid">
+                            <div class="lab-input-group">
+                                <label for="lab-pattern-input">Search Pattern / Keyword:</label>
+                                <input type="text" id="lab-pattern-input" value="Developer" placeholder="Enter keyword to search across jobs...">
+                            </div>
+
+                            <div class="lab-input-group">
+                                <label for="lab-algo-select">Select Algorithm to Inspect:</label>
+                                <select id="lab-algo-select">
+                                    <option value="kmp">Knuth-Morris-Pratt (KMP) — Prefix Function</option>
+                                    <option value="rabinkarp">Rabin-Karp — Rolling Hash Polynomial</option>
+                                    <option value="zalgorithm">Z-Algorithm — Linear Z-Array</option>
+                                    <option value="editdistance">Edit Distance — Dynamic Programming Levenshtein</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="lab-actions-row">
+                            <button class="button button-primary" id="run-single-algo-btn">
+                                Execute Single Algorithm <span>⚡</span>
+                            </button>
+                            <button class="button button-outline-purple" id="run-benchmark-btn">
+                                Run All & Compare (Benchmark) <span>📊</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- SINGLE ALGORITHM METRICS DISPLAY -->
+                    <div class="algo-metrics-card" id="single-algo-metrics" hidden>
+                        <div class="metrics-grid">
+                            <div class="metric-box">
+                                <small>ALGORITHM</small>
+                                <strong id="metric-algo-name">—</strong>
+                            </div>
+                            <div class="metric-box">
+                                <small>EXECUTION TIME</small>
+                                <strong class="purple-highlight" id="metric-exec-time">—</strong>
+                            </div>
+                            <div class="metric-box">
+                                <small>RECORDS SCANNED</small>
+                                <strong id="metric-records-scanned">60</strong>
+                            </div>
+                            <div class="metric-box">
+                                <small>MATCHES FOUND</small>
+                                <strong class="green-highlight" id="metric-matches-found">—</strong>
+                            </div>
+                            <div class="metric-box">
+                                <small>TIME COMPLEXITY</small>
+                                <strong id="metric-time-comp">—</strong>
+                            </div>
+                            <div class="metric-box">
+                                <small>SPACE COMPLEXITY</small>
+                                <strong id="metric-space-comp">—</strong>
+                            </div>
+                        </div>
+
+                        <div class="algo-explanation-box">
+                            <h4>How this algorithm works:</h4>
+                            <p id="metric-algo-explanation">—</p>
+                        </div>
+
+                        <div class="matched-preview-list">
+                            <h4>Matching Roles from Dataset:</h4>
+                            <div id="lab-matched-jobs-list" class="mini-jobs-grid"></div>
+                        </div>
+                    </div>
+
+                    <!-- BENCHMARK COMPARISON TABLE -->
+                    <div class="benchmark-results-card" id="benchmark-results-card" hidden>
+                        <div class="benchmark-header">
+                            <div>
+                                <h3>Side-by-Side Algorithm Benchmark</h3>
+                                <p id="benchmark-subtitle">Comparison on 60 real dataset job records</p>
+                            </div>
+                            <span class="benchmark-status-badge">JVM MEASURED</span>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="benchmark-table">
+                                <thead>
+                                    <tr>
+                                        <th>Algorithm</th>
+                                        <th>Matches Found</th>
+                                        <th>Execution Time (µs)</th>
+                                        <th>Time (Nanoseconds)</th>
+                                        <th>Time Complexity</th>
+                                        <th>Space Complexity</th>
+                                        <th>Algorithmic Notes</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="benchmark-table-body">
+                                    <!-- Populated via fetch -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="benchmark-footnote">
+                            <span class="note-icon">ℹ</span>
+                            <span id="benchmark-note">Execution times measured directly in Java Virtual Machine using System.nanoTime(). Performance varies based on pattern length and text repetition.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: GRAPH ALGORITHMS PLAYGROUND -->
+                <div class="lab-tab-content" id="tab-graph-algorithms">
+                    <div class="graph-nav-buttons">
+                        <button class="graph-selector-btn active" data-graph="bfs">
+                            <span>1</span> Breadth-First Search (BFS)
+                        </button>
+                        <button class="graph-selector-btn" data-graph="dfs">
+                            <span>2</span> Depth-First Search (DFS)
+                        </button>
+                        <button class="graph-selector-btn" data-graph="dijkstra">
+                            <span>3</span> Dijkstra's Shortest Path
+                        </button>
+                        <button class="graph-selector-btn" data-graph="bipartite">
+                            <span>4</span> Maximum Bipartite Matching
+                        </button>
+                    </div>
+
+                    <div class="graph-workspace-card">
+                        <div class="graph-workspace-header">
+                            <div>
+                                <h3 id="graph-demo-title">Graph Traversal: Breadth-First Search</h3>
+                                <p id="graph-demo-scenario">Scenario: Skill Prerequisite & Curriculum Pathway Traversal</p>
+                            </div>
+                            <div class="graph-controls-inline" id="graph-controls-inline">
+                                <!-- Dynamic controls per graph algorithm -->
+                            </div>
+                        </div>
+
+                        <div class="graph-display-grid">
+                            <!-- Visual Output Box -->
+                            <div class="graph-visual-box">
+                                <h4>Graph Representation & Traversal Visualization:</h4>
+                                <div class="graph-nodes-visual" id="graph-nodes-visual">
+                                    <!-- Dynamic nodes -->
+                                </div>
+                                <div class="traversal-ribbon" id="traversal-ribbon">
+                                    <!-- Traversal sequence tags -->
+                                </div>
+                            </div>
+
+                            <!-- Academic Log and Explanation -->
+                            <div class="graph-log-box">
+                                <h4>Execution Steps & Log:</h4>
+                                <div class="log-stream" id="graph-log-stream">
+                                    <!-- Real step logs -->
+                                </div>
+                                <div class="graph-complexity-box" id="graph-complexity-box">
+                                    <div><strong>Time Complexity:</strong> <span id="graph-time-comp">O(V + E)</span></div>
+                                    <div><strong>Space Complexity:</strong> <span id="graph-space-comp">O(V)</span></div>
+                                </div>
+                                <div class="graph-domain-explanation">
+                                    <strong>Real-World Application:</strong>
+                                    <p id="graph-domain-text">...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 5. ABOUT PROJECT SECTION                                                  -->
+        <!-- ========================================================================= -->
+        <section class="about-section" id="about-project">
+            <div class="section-shell">
+                <div class="section-header-block">
+                    <div class="eyebrow-pill">
+                        <span>ACADEMIC DOCUMENTATION</span>
+                    </div>
+                    <h2>About the Intelligent Job Portal</h2>
+                    <p>DSA-3 Academic Project — Comprehensive Technical & Theoretical Documentation.</p>
+                </div>
+
+                <div class="about-cards-grid">
+                    <div class="about-card">
+                        <h3>Problem Statement & Objectives</h3>
+                        <p>
+                            Traditional recruitment platforms rely on basic database keyword lookups that either fail on partial prefixes,
+                            struggle with multi-word skill sets, or lack transparent candidate-to-role matching.
+                        </p>
+                        <p>
+                            This project demonstrates how core <strong>Data Structures and Algorithms (DSA)</strong> can power an end-to-end intelligent recruitment system:
+                        </p>
+                        <ul class="about-list">
+                            <li>Fast exact and rolling-hash pattern matching across job titles and descriptions.</li>
+                            <li>Approximate fuzzy matching with dynamic programming to gracefully handle applicant spelling variations.</li>
+                            <li>Mathematical skill set similarity scoring using Jaccard Similarity coefficient.</li>
+                            <li>Graph theory modeling for learning prerequisites, specialization depths, shortest skill bridges, and bipartite role assignments.</li>
+                        </ul>
+                    </div>
+
+                    <div class="about-card">
+                        <h3>Application Architecture</h3>
+                        <div class="architecture-flow">
+                            <div class="arch-node">
+                                <strong>Client Layer</strong>
+                                <small>HTML5, CSS3, Vanilla JavaScript (fetch API)</small>
+                            </div>
+                            <div class="arch-arrow">↓ HTTP JSON REST</div>
+                            <div class="arch-node highlight">
+                                <strong>Backend Controller</strong>
+                                <small>Spring Boot (JobController, REST Endpoints)</small>
+                            </div>
+                            <div class="arch-arrow">↓ In-Memory Service</div>
+                            <div class="arch-node">
+                                <strong>Service & Algorithm Engine</strong>
+                                <small>JobService, KMP, Rabin-Karp, Z-Algorithm, EditDistance, Jaccard, Graphs</small>
+                            </div>
+                            <div class="arch-arrow">↓ Tab-Delimited I/O</div>
+                            <div class="arch-node">
+                                <strong>Dataset Storage</strong>
+                                <small>Local data/jobs.csv (60 Real Industrial Job Listings)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ALGORITHMS COMPLEXITY TABLE -->
+                <div class="complexity-table-card">
+                    <h3>Summary of Implemented DSA Algorithms</h3>
+                    <div class="table-responsive">
+                        <table class="benchmark-table complexity-table">
+                            <thead>
+                                <tr>
+                                    <th>Algorithm</th>
+                                    <th>Category</th>
+                                    <th>Best Case</th>
+                                    <th>Worst Case</th>
+                                    <th>Space Complexity</th>
+                                    <th>Role in Platform</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Knuth-Morris-Pratt (KMP)</strong></td>
+                                    <td>String Matching</td>
+                                    <td>O(N)</td>
+                                    <td>O(N + M)</td>
+                                    <td>O(M)</td>
+                                    <td>Prefix-function (LPS) zero-backtracking search across descriptions.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Rabin-Karp</strong></td>
+                                    <td>String Matching</td>
+                                    <td>O(N + M)</td>
+                                    <td>O(N × M)</td>
+                                    <td>O(1)</td>
+                                    <td>Polynomial rolling hash with character verification upon collision.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Z-Algorithm</strong></td>
+                                    <td>String Matching</td>
+                                    <td>O(N + M)</td>
+                                    <td>O(N + M)</td>
+                                    <td>O(N + M)</td>
+                                    <td>Z-array prefix matching over concatenated search string.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Edit Distance (Levenshtein)</strong></td>
+                                    <td>Dynamic Programming</td>
+                                    <td>O(M × N)</td>
+                                    <td>O(M × N)</td>
+                                    <td>O(M × N)</td>
+                                    <td>Fuzzy keyword search forgiving applicant typos and misspellings.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Jaccard Similarity</strong></td>
+                                    <td>Set Theory</td>
+                                    <td>O(|A| + |B|)</td>
+                                    <td>O(|A| + |B|)</td>
+                                    <td>O(|A| + |B|)</td>
+                                    <td>Tokenized set intersection over union for candidate skill fit.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Breadth-First Search (BFS)</strong></td>
+                                    <td>Graph Traversal</td>
+                                    <td>O(V + E)</td>
+                                    <td>O(V + E)</td>
+                                    <td>O(V)</td>
+                                    <td>Level-by-level skill prerequisite and competency curriculum progression.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Depth-First Search (DFS)</strong></td>
+                                    <td>Graph Traversal</td>
+                                    <td>O(V + E)</td>
+                                    <td>O(V + E)</td>
+                                    <td>O(V)</td>
+                                    <td>Deep vertical domain specialization and recursive skill hierarchy.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Dijkstra's Algorithm</strong></td>
+                                    <td>Shortest Path</td>
+                                    <td>O(V²) / O((V+E)logV)</td>
+                                    <td>O(V²)</td>
+                                    <td>O(V)</td>
+                                    <td>Minimum learning effort roadmap bridging candidate to target role.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Maximum Bipartite Matching</strong></td>
+                                    <td>Network Flow / Matching</td>
+                                    <td>O(V × E)</td>
+                                    <td>O(V × E)</td>
+                                    <td>O(V)</td>
+                                    <td>Optimal 1-to-1 candidate-to-job opening allocation via augmenting paths.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="limitations-card">
+                    <div class="limit-col">
+                        <h4>Platform Strengths</h4>
+                        <ul>
+                            <li>Zero external database or framework overhead; completely portable.</li>
+                            <li>Real nanosecond JVM measurements without hardcoding or mock values.</li>
+                            <li>Responsive, modern interface with zero third-party CSS dependencies.</li>
+                        </ul>
+                    </div>
+                    <div class="limit-col">
+                        <h4>Future Enhancements</h4>
+                        <ul>
+                            <li>Aho-Corasick multi-string automaton for concurrent scanning of 100+ skills.</li>
+                            <li>Hopcroft-Karp O(E√V) optimization for large-scale enterprise candidate allocation.</li>
+                            <li>A* Heuristic search incorporating applicant salary expectations as weight penalty.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================================================= -->
+    <!-- FOOTER                                                                    -->
+    <!-- ========================================================================= -->
+    <footer class="site-footer">
+        <div class="section-shell footer-inner">
+            <div class="footer-brand-col">
+                <a class="brand" href="#home">
+                    <span class="brand-mark">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 23V9l9 9 9-9v14"/>
+                            <path d="M7 9h5M20 23h5"/>
+                        </svg>
+                    </span>
+                    <span class="brand-text">
+                        intelli<span class="brand-accent">jobs</span>
+                    </span>
+                </a>
+                <p>Intelligent Job Portal Using String Matching and Graph Algorithms.</p>
+                <small>DSA-3 Academic Project · Built with Java 17, Spring Boot, HTML5, CSS3, Vanilla JS.</small>
+            </div>
+
+            <div class="footer-links-col">
+                <h5>Navigation</h5>
+                <a href="#home">Home</a>
+                <a href="#jobs">Find Jobs</a>
+                <a href="#skill-matcher">Skill Matcher</a>
+                <a href="#algorithm-lab">Algorithm Lab</a>
+                <a href="#about-project">About Project</a>
+            </div>
+
+            <div class="footer-links-col">
+                <h5>DSA Algorithms</h5>
+                <a href="#algorithm-lab">Knuth-Morris-Pratt</a>
+                <a href="#algorithm-lab">Rabin-Karp Rolling Hash</a>
+                <a href="#algorithm-lab">Z-Algorithm</a>
+                <a href="#algorithm-lab">Levenshtein Edit Distance</a>
+                <a href="#algorithm-lab">Graph Demonstrations</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom section-shell">
+            <span>© 2026 Intelligent Job Portal · Academic Demonstration</span>
+            <a href="#home" class="back-to-top">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <!-- ========================================================================= -->
+    <!-- MODALS & OVERLAYS                                                         -->
+    <!-- ========================================================================= -->
+
+    <!-- 1. JOB DETAILS MODAL -->
+    <div class="modal-backdrop" id="job-details-modal" hidden>
+        <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modal-job-title">
+            <button class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">×</button>
+            <div class="modal-body" id="modal-job-content">
+                <!-- Dynamically filled -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. SAVED JOBS DRAWER/MODAL -->
+    <div class="modal-backdrop" id="saved-jobs-modal" hidden>
+        <div class="modal-window saved-modal-window" role="dialog" aria-modal="true" aria-labelledby="saved-modal-title">
+            <button class="modal-close-btn" id="saved-modal-close-btn" aria-label="Close saved jobs">×</button>
+            <div class="saved-modal-header">
+                <h3 id="saved-modal-title">★ Saved Opportunities</h3>
+                <button class="clear-saved-btn" id="clear-all-saved-btn">Clear All</button>
+            </div>
+            <div class="saved-modal-body" id="saved-jobs-list">
+                <!-- Dynamically filled -->
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>

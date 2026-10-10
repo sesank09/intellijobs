@@ -1,0 +1,61 @@
+ID	JobTitle	Company	Location	Qualification	Experience	Salary	Skills	Description
+101	Java Developer	Northstar Labs	Hyderabad	B.Tech CSE	0-2 years	6-10 LPA	Java, SQL, Spring Boot	Develop and maintain Java applications and backend services.
+102	Data Analyst	Metric Works	Bengaluru	B.Tech or related degree	0-2 years	5-8 LPA	Python, SQL, Excel	Analyze datasets and prepare clear reports for business teams.
+103	Frontend Developer	Pixel Nova	Hyderabad	B.Tech CSE	0-2 years	4-8 LPA	HTML, CSS, JavaScript, React	Build responsive websites and accessible user interfaces.
+104	Software Engineer	CodeCraft	Chennai	B.Tech CSE	0-2 years	5-9 LPA	Java, Data Structures, SQL, Git	Develop software features and solve programming problems.
+105	Python Developer	BrightPath Technologies	Pune	B.Tech CSE or IT	0-2 years	5-9 LPA	Python, Django, SQL	Create backend applications using Python technologies.
+106	Machine Learning Engineer	FutureMind AI	Bengaluru	B.Tech CSE or related degree	0-2 years	7-12 LPA	Python, Machine Learning, Statistics	Build and evaluate machine learning models for practical use cases.
+107	Cloud Engineer	SkyLayer Technologies	Hyderabad	B.Tech CSE or IT	0-2 years	6-10 LPA	AWS, Linux, Docker, Networking	Deploy applications and help maintain cloud infrastructure.
+108	Cybersecurity Analyst	SecureWave	Hyderabad	B.Tech CSE	0-2 years	5-8 LPA	Cybersecurity, Networking, Linux	Monitor systems and investigate potential security issues.
+109	Full Stack Developer	NovaTech Solutions	Chennai	B.Tech CSE	0-2 years	6-10 LPA	Java, React, SQL, Spring Boot	Develop frontend features and backend services for web applications.
+110	Database Developer	DataBridge Systems	Pune	B.Tech CSE or IT	0-2 years	4-8 LPA	SQL, MySQL, Database Design	Design databases and improve query performance.
+111	Android Developer	AppNest Digital	Bengaluru	B.Tech CSE	0-2 years	5-9 LPA	Java, Kotlin, Android, SQLite	Develop and maintain Android mobile applications.
+112	DevOps Engineer	CloudPilot Systems	Remote	B.Tech CSE or IT	0-2 years	5-9 LPA	Linux, Git, Docker, CI/CD	Automate software deployment and maintenance workflows.
+113	Data Scientist	InsightWorks	Hyderabad	B.Tech or related degree	0-2 years	7-12 LPA	Python, SQL, Machine Learning, Statistics	Build data models and extract insights from datasets.
+114	UI UX Designer	CreativePixel Studio	Remote	Relevant degree or portfolio	0-2 years	4-8 LPA	Figma, UI Design, UX Research, Prototyping	Design user-friendly digital experiences and interactive prototypes.
+115	Backend Developer	OrbitStack	Hyderabad	B.Tech CSE	0-2 years	6-10 LPA	Java, REST API, SQL, Spring Boot	Build backend services and application APIs.
+116	React Developer	PixelNova	Remote	B.Tech or equivalent skills	0-2 years	5-9 LPA	React, JavaScript, HTML, CSS	Create interactive interfaces using reusable components.
+117	Software Testing Engineer	QualityFirst Labs	Chennai	B.Tech CSE or IT	0-2 years	4-7 LPA	Java, Selenium, SQL, Testing	Test applications, document defects, and improve software quality.
+118	Business Intelligence Analyst	ClearView Analytics	Bengaluru	Bachelor's degree in a related field	0-2 years	5-9 LPA	SQL, Excel, Power BI, Data Visualization	Build dashboards and transform business data into useful reports.
+119	AI Engineer Trainee	FutureMind AI	Hyderabad	B.Tech CSE or related degree	Entry level	6-11 LPA	Python, Machine Learning, NLP, Statistics	Assist with AI experiments and machine learning prototypes.
+120	Network Engineer	ConnectSphere	Mumbai	B.Tech CSE or related degree	0-2 years	4-7 LPA	Networking, TCP/IP, Linux, Troubleshooting	Support network infrastructure and diagnose connectivity issues.
+121	Cloud Support Associate	Nimbus Grid	Chennai	B.Tech CSE or IT	0-2 years	4-7 LPA	AWS, Linux, Networking, Troubleshooting	Help maintain cloud services and investigate support incidents.
+122	Information Security Analyst	ShieldPoint Technologies	Mumbai	B.Tech CSE or related degree	0-2 years	5-9 LPA	Security, Networking, Linux, Risk Analysis	Review security alerts and support information security controls.
+123	Computer Vision Engineer Trainee	VisionForge AI	Hyderabad	B.Tech CSE or related degree	Entry level	6-10 LPA	Python, OpenCV, Machine Learning, NumPy	Build prototypes that process images and explore computer vision.
+124	Java Backend Intern	CodeHarbor	Bengaluru	Currently pursuing B.Tech CSE	Internship	20,000-30,000 INR/month	Java, Data Structures, SQL, Git	Contribute to backend features while learning software engineering practices.
+125	Web Application Developer	EverPixel Technologies	Hyderabad	B.Tech CSE or equivalent skills	0-2 years	5-8 LPA	HTML, CSS, JavaScript, SQL	Develop responsive web applications and connect interfaces with data.
+126	Product Support Engineer	BrightDesk Systems	Hyderabad	B.Tech CSE or IT	0-2 years	4-7 LPA	SQL, Linux, Troubleshooting, Communication	Investigate technical issues and help customers use software products.
+127	Systems Engineer	Vertex Digital	Pune	B.Tech CSE or IT	0-2 years	4-7 LPA	Linux, Networking, Python, Operating Systems	Support system configuration, monitoring, and technical operations.
+128	Application Developer	BlueOrbit Technologies	Chennai	B.Tech CSE	0-2 years	5-8 LPA	Java, SQL, APIs, Git	Implement application features and maintain existing code.
+129	NLP Engineer Intern	LinguAI Labs	Bengaluru	B.Tech CSE or related degree	Internship	20,000-35,000 INR/month	Python, NLP, Machine Learning, Text Processing	Experiment with text analysis and natural language processing.
+130	Data Engineer	Lakehouse Labs	Bengaluru	B.Tech CSE or related degree	0-2 years	6-11 LPA	Python, SQL, ETL, Data Pipelines	Build reliable data pipelines and support analytics workflows.
+131	Power BI Developer	InsightWorks	Hyderabad	Bachelor's degree in a related field	0-2 years	5-9 LPA	Power BI, SQL, Excel, Data Modeling	Create dashboards and maintain reporting datasets.
+132	QA Automation Intern	QualityFirst Labs	Pune	Currently pursuing B.Tech	Internship	18,000-28,000 INR/month	Java, Selenium, Testing, Git	Write test scripts and help validate web application functionality.
+133	iOS Developer Trainee	AppNest Digital	Bengaluru	B.Tech CSE	Entry level	5-9 LPA	Swift, iOS, REST API, Git	Assist in creating and testing iOS mobile application features.
+134	Game Developer Intern	PlayForge Studio	Hyderabad	B.Tech CSE or related degree	Internship	20,000-32,000 INR/month	C#, Unity, OOP, Game Development	Prototype gameplay features and support game testing.
+135	C++ Software Developer	VectorByte Systems	Pune	B.Tech CSE	0-2 years	5-9 LPA	C++, Data Structures, Algorithms, Git	Develop efficient applications and work on algorithmic problems.
+136	Embedded Software Engineer	CircuitLeaf Technologies	Chennai	B.Tech CSE, ECE or related degree	0-2 years	5-9 LPA	C, C++, Embedded Systems, Linux	Develop and test embedded software modules.
+137	Site Reliability Engineer Trainee	CloudPilot Systems	Remote	B.Tech CSE or IT	Entry level	6-10 LPA	Linux, Python, Cloud, Monitoring	Learn system monitoring, incident response, and reliability practices.
+138	Technical Business Analyst	ClearView Analytics	Bengaluru	Bachelor's degree in a related field	0-2 years	5-8 LPA	SQL, Requirements Analysis, Excel, Communication	Translate business needs into clear technical requirements.
+139	Information Technology Associate	Vertex Digital	Hyderabad	B.Tech CSE or IT	0-2 years	3.5-6 LPA	Networking, Windows, Linux, Troubleshooting	Assist with IT operations, system support, and issue resolution.
+140	Ethical Hacking Trainee	Cobalt Shield	Bengaluru	B.Tech CSE or related degree	Entry level	4-8 LPA	Cybersecurity, Linux, Networking, Python	Support authorised security testing and document findings.
+141	Database Administrator Trainee	DataBridge Systems	Chennai	B.Tech CSE or IT	Entry level	4-7 LPA	MySQL, SQL, Database Administration, Linux	Assist with database maintenance, backups, and monitoring.
+142	Salesforce Developer Trainee	CloudCanvas Consulting	Hyderabad	B.Tech or related degree	Entry level	5-8 LPA	Salesforce, Apex, SQL, JavaScript	Learn to customise business workflows on the Salesforce platform.
+143	Digital Analytics Associate	Metric Works	Remote	Bachelor's degree in a related field	0-2 years	4-7 LPA	SQL, Excel, Analytics, Data Visualization	Review digital performance metrics and prepare insight reports.
+144	Software Engineering Intern	Northstar Labs	Hyderabad	Currently pursuing B.Tech CSE	Internship	20,000-35,000 INR/month	Java, Python, Data Structures, Git	Assist engineers with small features, tests, and code reviews.
+145	Frontend UI Engineer	Mellow Studio	Remote	B.Tech or portfolio	0-2 years	5-9 LPA	JavaScript, React, CSS, Accessibility	Build polished user interfaces with accessible design practices.
+146	API Integration Engineer	BridgeCode Technologies	Pune	B.Tech CSE	0-2 years	5-9 LPA	REST API, Java, JSON, SQL	Integrate services and troubleshoot application-to-application communication.
+147	Research Assistant - AI	FutureMind AI	Bengaluru	B.Tech CSE or related degree	Internship	22,000-35,000 INR/month	Python, Machine Learning, Research, Statistics	Support experiments and document research results for AI projects.
+148	Linux Systems Administrator Trainee	Nimbus Grid	Chennai	B.Tech CSE or IT	Entry level	4-7 LPA	Linux, Bash, Networking, Monitoring	Help administer Linux systems and automate routine tasks.
+149	Technical Content Developer	LearnLoop Technologies	Hyderabad	B.Tech CSE or strong technical writing skills	0-2 years	3.5-6 LPA	Java, Python, Technical Writing, Documentation	Create clear technical tutorials and developer documentation.
+150	Robotics Software Trainee	MotionWorks Lab	Pune	B.Tech CSE, ECE or related degree	Entry level	5-8 LPA	Python, C++, Robotics, Linux	Assist with robotics software development and simulation testing.
+151	Blockchain Developer Trainee	ChainSpring Labs	Bengaluru	B.Tech CSE	Entry level	5-9 LPA	JavaScript, Solidity, Blockchain, Git	Explore smart contracts and build blockchain application prototypes.
+152	Mobile App Developer	AppNest Digital	Hyderabad	B.Tech CSE	0-2 years	5-9 LPA	Flutter, Dart, REST API, Git	Develop cross-platform mobile applications and integrate APIs.
+153	ETL Developer Trainee	Lakehouse Labs	Chennai	B.Tech CSE or IT	Entry level	4-8 LPA	SQL, Python, ETL, Data Warehousing	Build and validate data extraction and transformation workflows.
+154	Application Security Associate	SecureWave	Hyderabad	B.Tech CSE or related degree	0-2 years	5-9 LPA	Application Security, OWASP, Java, Testing	Review applications for common security weaknesses and document fixes.
+155	Technical Project Coordinator	Launchpad Digital	Bengaluru	B.Tech or related degree	0-2 years	4-7 LPA	Agile, Communication, Excel, Project Coordination	Coordinate schedules, track delivery tasks, and share project updates.
+156	Data Quality Analyst	Evergreen Insights	Hyderabad	Bachelor's degree in a related field	0-2 years	4-7 LPA	SQL, Excel, Data Quality, Python	Validate datasets and investigate data consistency problems.
+157	Spring Boot Developer	BlueOrbit Technologies	Hyderabad	B.Tech CSE	0-2 years	6-10 LPA	Java, Spring Boot, REST API, MySQL	Build Java REST services and integrate them with relational databases.
+158	React Native Developer Trainee	Pixel Nova	Pune	B.Tech CSE or equivalent skills	Entry level	4-8 LPA	React Native, JavaScript, REST API, Git	Help develop and test cross-platform mobile interfaces.
+159	Security Operations Center Trainee	Cobalt Shield	Chennai	B.Tech CSE or related degree	Entry level	4-7 LPA	Cybersecurity, SIEM, Networking, Linux	Assist with alert review and security incident documentation.
+160	Junior Solutions Engineer	Vertex Digital	Remote	B.Tech CSE or IT	0-2 years	5-8 LPA	Java, APIs, SQL, Communication	Help design technical solutions and explain integrations to customers.
